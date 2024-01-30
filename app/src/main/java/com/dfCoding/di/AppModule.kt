@@ -1,7 +1,7 @@
 package com.dfCoding.di
 
 
-import com.dfCoding.data.KtorRealtimeMessagingClient
+import com.dfCoding.data.KtorRealTimeMessagingClient
 import com.dfCoding.data.RealtimeMessagingClient
 import dagger.Module
 import dagger.Provides
@@ -29,6 +29,6 @@ object AppModule {
     @Singleton
     @Provides
     fun provideRealtimeMessagingClient(httpClient: HttpClient): RealtimeMessagingClient {
-        return KtorRealtimeMessagingClient(httpClient)
+        return KtorRealTimeMessagingClient(httpClient)
     }
 }
